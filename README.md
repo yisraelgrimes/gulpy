@@ -1,4 +1,4 @@
-Gulpy v0.0.1
+Gulpy v0.0.2
 
 
 Need to add documentation.
@@ -14,5 +14,7 @@ To see all available gulp tasks, run `gulp help` or `gulp info`.
 ---
 
 ## Changelog
+- v0.0.2
+	- Added tunnel options for BrowserSync Config.
 - v0.0.1
 	- Added initial task files

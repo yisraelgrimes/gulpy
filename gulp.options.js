@@ -1,4 +1,4 @@
-// Gulpy v0.0.1
+// Gulpy v0.0.2
 //
 // Configures options for gulp tasks
 // -------------------------------------------------------------------
@@ -9,6 +9,16 @@
 // -------------------------------------
 var buildType = 'static';     // HTMl
 // var buildType = 'dynamic'; // CMS Site
+
+
+// -------------------------------------
+// Dev Server Config
+// -------------------------------------
+// Tunnel for remote access.
+// [false] : Turns off external access
+// [True]  : Attempts to use a ranome public url
+// [String]: Attempts to use the string. Like: 'string.localtunnel.me'
+var tunnel = 'fresh';
 
 
 // -------------------------------------
@@ -107,6 +117,8 @@ module.exports = {
 	isDynamic: isDynamic,         // env-bool
 	isStatic: isStatic,           // env-bool
 
+	// BrowserSync Tunnel
+	tunnel: tunnel,               // bool or string
 	// Views
 	usePug: usePug,               // views-bool
 	lintPug: lintPug,             // views-bool

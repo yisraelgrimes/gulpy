@@ -7,7 +7,7 @@
 // Gulp tasks directory
 var tasksD = './gulp';
 
-// Gulp config file. Default is setup for Gulpy being in node_modules.
+// Gulp config file. Default is setup for using Gulpy from node_modules.
 // Remove `../../` from the path if using Gulpy on it's own
 var gulpOptions = '../../../gulp.options';
 

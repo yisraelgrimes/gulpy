@@ -1,4 +1,4 @@
-// Gulpy v0.0.1
+// Gulpy v0.0.2
 //
 // - server
 // - watch
@@ -17,7 +17,7 @@ var op = require(pth.options); // Config
 
 
 /**
- * Starts your local server with browserSync with `./staging/index.html` as the entry point.
+ * Starts your local server using browserSync with `./staging/index.html` as the entry point, opens up port '8080' to fine-tune your browserSync config, and optionally opens up a tunnel for remote viewing of the local site.
  *
  * @task  {server}
  * @group {Development}
@@ -25,8 +25,12 @@ var op = require(pth.options); // Config
 g.task('server', function() {
 	browserSync({
 		server: {
-			baseDir: pth.serverD
-		}
+			baseDir: pth.serverD // Serve files from here
+		},
+		ui: {
+			port: 8080  // Port for configuring browserSync
+		},
+		tunnel: op.tunnel // External Tunnel
 	})
 });
 
